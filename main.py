@@ -4,6 +4,7 @@ import argparse
 
 FILE = 'word.txt'
 OUTPUT_FILE = 'title.txt'
+DEFAULT_TITLE_LENGTH = 2
 
 
 class TitleGenerator:
@@ -40,7 +41,7 @@ class TitleGenerator:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--length', type=int, default=2,
+    parser.add_argument('--length', type=int, default=DEFAULT_TITLE_LENGTH,
                         help='desired word length')
     args = parser.parse_args()
 
